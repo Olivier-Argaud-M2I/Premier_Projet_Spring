@@ -66,10 +66,10 @@ public class SaisieService {
     public DataModel2 convertStringToDatamodel(String operation){
         DataModel2 model = new DataModel2();
         try {
-            String[] tab = operation.split(" ");
+            String[] tab = operation.split("\\+|-|\\*|/|²");
             model.setA(Double.parseDouble(tab[0]));
-            model.setB(Double.parseDouble(tab[2]));
-            model.setOperation(OperationType.fromString(tab[1]));
+            model.setB(Double.parseDouble(tab[1]));
+            model.setOperation(OperationType.fromString(operation.substring(tab[0].length(),1+tab[0].length())));
         }
         catch (Exception e){
             throw new IllegalArgumentException("saisie incorrect");
