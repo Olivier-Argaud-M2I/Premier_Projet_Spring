@@ -30,10 +30,10 @@ public class PremierSpringApplication implements CommandLineRunner {
         coucouService.direCoucou();
 
 
-        while(true){
-//            saisieService.menu();
-            saisieService.menu2();
-        }
+//        while(true){
+////            saisieService.menu();
+//            saisieService.menu2();
+//        }
 
     }
 
